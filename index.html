@@ -1,0 +1,93 @@
+<HTML>
+
+<head>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  
+  <div class="father p-2">
+    <div class="btn" >
+      <div class="btn_indicator">
+        <div class="btn_icon">
+          <i class="btn_lcon fa-solid fa-sun"></i>
+        </div>
+      </div>
+    </div>
+    <div class="crud">
+      <div class="head">
+        <h2>Crud</h2>
+        <p> PORDUCT MANAGEMENT SYSTEM</p>
+      </div>
+      <div class="inputs">
+        <input type="text" id="title" placeholder="title">
+        <div class="price">
+          <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+          <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+          <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+          <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+          <small id="total"></small>
+        </div>
+
+        <input type="number" id="count" placeholder="count">
+        <input type="text" id="category" placeholder="Category">
+        <button id="submit">Create</button>
+      </div>
+      <div class="outputs">
+        <div class="searchBlock">
+          <input onkeyup="searchDate(this.value)" type="text" id="search" placeholder="search">
+          <div class="btnsearch">
+            <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title </button>
+            <button onclick="getSearchMood(this.id)" id="searchcategory">Search By category </button>
+          </div>
+        </div>
+
+        <div id="deleteAll" style="margin-top: 10px;
+      margin-bottom: 10px; color: #00ff55;"></div>
+
+        <table class="table">
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>Category</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+          <tbody id="tbody">
+            <!-- <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td><button id="update">Update</button></td>
+            <td><button id="delete">Delete</button> </td>
+            
+          </tr>
+           -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/abdo.js"></script>
+</body>
+
+</HTML>
